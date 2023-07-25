@@ -1,0 +1,92 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Montserrat, sans-serif;
+    overflow-x: hidden; /* To prevent horizontal scrollbar */
+}
+
+.video-background {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.video-background video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.contentContainer {
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    transform: translate(-50%, -60%);
+    text-align: center;
+    color: #fff;
+
+    animation: fadeIn 2s;
+}
+
+
+h1 {
+    font-size: 3rem;
+    margin: 0;
+    margin-bottom: 20px;
+    text-align: left;
+    font-weight: 600;
+}
+
+.subtext {
+    font-size: 1rem;
+    text-align: left;
+    font-weight: 200;
+}
+
+.imprint {
+    position: absolute;
+    bottom: 5%;
+    left: 35%;
+    text-align: center;
+    color: #fff;
+}
+
+.imprint a {
+    color: #fff;
+}
+
+/* Responsive CSS */
+
+/* For tablets and larger screens */
+@media (min-width: 768px) {
+    h1 {
+        font-size: 4rem;
+    }
+    .subtext {
+        font-size: 1.5rem;
+    }
+}
+
+/* For smartphones and smaller screens */
+@media (max-width: 767px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+    .subtext {
+        font-size: 0.8rem;
+    }
+    .imprint {
+        font-size: 0.8rem;
+    }
+}
+
+/* for opacity effect on fade in*/
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
